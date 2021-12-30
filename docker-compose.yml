@@ -12,7 +12,9 @@ services:
     ports:
       - "7777:80"
     volumes:
-      - .:/app
+      - ./tests:/app/tests
+      - ./public:/app/public
+      - ./module:/app/module
 
 networks:
   default:
