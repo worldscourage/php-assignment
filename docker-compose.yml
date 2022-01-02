@@ -11,7 +11,14 @@ services:
       target: local
     ports:
       - "7777:80"
+    volumes:
+      - ./tests:/app/tests
+      - ./public:/app/public
+      - ./module:/app/module
 
 networks:
   default:
     name: sm_assignment
+
+volumes:
+  myCodeVolume:
