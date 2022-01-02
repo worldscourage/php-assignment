@@ -55,7 +55,7 @@ final class AveragePostNumberPerMonthPerUserCalculator extends AbstractCalculato
             $child = (new StatisticsTo())
                 ->setName($this->parameters->getStatName())
                 ->setValue($total/$cnt)
-                ->setSplitPeriod($userId) // em... meh
+                ->setSplitPeriod((string) $userId) // em... meh
                 ->setUnits(self::UNITS);
 
             $stats->addChild($child);
